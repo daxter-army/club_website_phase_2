@@ -1,0 +1,308 @@
+@font-face {
+    font-family: fontCustomTwo;
+    src: url(../misc/roboto_slab.ttf);
+  }
+  
+  *{
+      margin: 0;
+      padding: 0;
+      font-family: fontCustomTwo;
+    }
+
+/*HEADER*/
+
+.header{
+    font-size: 20px;
+    height: 100px;
+    padding: 0 20px;
+    color: #000;
+  }
+
+  .logo{
+    line-height: 100px;
+    float: left;
+  }
+
+  .menu{
+    float: right;
+    line-height: 100px;
+  }
+
+  .menu a{
+    color: #000;
+    text-decoration: none;
+    margin-left:5px;
+    margin-right:5px;
+    padding: 10px 20px;
+    transition: 0.2s;
+    border-radius: 10px;
+  }
+
+  #one{
+      border: 1px solid #9A5BFD;
+  }
+
+  #two{
+      border: 1px solid #FD5177;
+  }
+
+  #three{
+      border: 1px solid #FFAE0B;
+  }
+
+  #four{
+      border:1px solid #00BAD9;
+  }
+
+  #five{
+      border:1px solid #0D0A3E;
+  }
+
+  #one:hover{
+      color:white;
+      background-color: #9A5BFD;
+      transition: 0.1s;
+  }
+
+  #two:hover{
+    color:white;
+    background-color: #FD5177;
+    transition: 0.1s;
+}
+
+  #three:hover{
+    color:white;
+    background-color: #FFAE0B;
+    transition: 0.1s;
+}
+
+  #four:hover{
+    color:white;
+    background-color: #00BAD9;
+    transition: 0.1s;
+}
+
+  #five:hover{
+    color:white;
+    background-color: #0D0A3E;
+    transition: 0.1s;
+}
+
+  .show-menu-btn,.hide-menu-btn{
+    transition: 0.4s;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+  }
+
+  .show-menu-btn{
+    float: right;
+  }
+  .show-menu-btn i{
+    line-height: 100px;
+  }
+
+  /*.menu a:hover,*/
+  .show-menu-btn:hover,
+  .hide-menu-btn:hover{
+    color: #3498db;
+  }
+  
+  #chk{
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;
+  }
+  
+
+  @media screen and (max-width:1200px) {
+    .show-menu-btn,.hide-menu-btn{
+      display: block;
+    }
+    .menu{
+      position: fixed;
+      width: 75%;
+      height: 100vh;
+      background: #fff;
+      right: -100%;
+      top: 0;
+      text-align: center;
+      padding: 80px 0;
+      line-height: normal;
+      transition: 0.7s;
+      font-size: 15px;
+    }
+    .menu a{
+      display: block;
+      padding: 20px;
+    }
+    .hide-menu-btn{
+      position: absolute;
+      top: 40px;
+      right: 40px;
+    }
+    #chk:checked ~ .menu{
+      right: 0;
+    }
+
+    #one, #two, #three, #four, #five{
+        border: none;
+    }
+  }
+
+/*HEADER ENDS*/
+
+/*BODY*/
+
+h1{
+  font-size: 5.5rem;
+}
+
+h2{
+  font-size: 2.5rem;
+}
+
+main{
+    display:grid;
+}
+
+.card{
+    display:grid;
+    margin-left:10px;
+    margin-right:10px;
+    padding-left:3rem;
+    padding-right:3rem;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+#info2{
+    padding-left: 2.5rem;
+}
+
+img{
+    max-width: 100%;
+}
+
+.info{
+    padding-top: 15%;
+}
+
+/*BODY ENDS*/
+
+/* Scroll Bar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/* Footer */
+
+.footer{
+  background: #D0BCF7;
+  color: white;
+  margin: 10px;
+  margin-top: 60px;
+  border-radius: 10px;
+  height: 220px;
+  position: relative;
+  z-index:-1;
+}
+
+p{
+  font-size:18px;
+  padding-top:12px;
+  padding-left:1rem;
+}
+
+/*sticking to bottom*/
+
+.wrapper{
+  min-height:100%;
+}
+
+.footer .footer-bottom{
+  font-size: 1.25rem;
+  background: #9A5BFD;
+  color: white;
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* Footer Ends*/
+
+/*Responsiveness*/
+
+@media screen and (max-width:600px){
+  .logo{
+    font-size:20px;
+  }
+
+  h1{
+    font-size: 3rem;
+  }
+
+  h2{
+    font-size: 2rem;
+  }
+
+  p{
+    font-size:11px;
+    padding-left:0px;
+  }
+
+  .card{
+    margin-left:0px;
+    padding-left: 10px;
+    width: 45vh;
+  }
+
+  img{
+    width:57%;
+  }
+
+  .info{
+    padding-top: 20px;
+    width:60%;
+  }
+
+  #info2{
+    padding-left:10px;
+    width: 50vh;
+  }
+
+  .footer{
+    height: 200px;
+  }
+
+  .footer-section p {
+    padding-left:10px;
+    font-size: 14px;
+  }
+  
+  .footer .footer-bottom{
+    font-size:0.9rem;
+  }
+}

@@ -1,0 +1,165 @@
+@font-face {
+    font-family: fontCustomTwo;
+    src: url(../misc/roboto_slab.ttf);
+}
+  
+*{
+    margin: 0;
+    padding: 0;
+    font-family: fontCustomTwo;
+}
+
+main{
+    box-sizing: border-box;
+}
+
+  .gallery-section{
+    width: 100%;
+    padding: 60px 0;
+  }
+  
+  .inner-width{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 0px;
+  }
+  
+  .gallery-section h1{
+    text-align: center;
+    /* text-transform: uppercase; */
+    color: #333;
+  }
+
+  .gallery-section h2{
+      font-size: 1.75rem;
+      margin-bottom: 10px;
+  }
+
+  .gallery-section p{
+      margin-bottom: 20px;
+  }
+  
+  .border{
+    width: 180px;
+    height: 4px;
+    background: #00BAD9;
+    margin: 20px auto;
+  }
+  
+  .gallery-section .gallery{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+  
+  .gallery-section .image{
+    flex: 25%;
+    overflow: hidden;
+    cursor: pointer;
+    padding:20px;
+  }
+  
+  .gallery-section .image img{
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+  }
+  
+  .gallery-section .image:hover img{
+    transform: scale(1.1) rotate(0deg);
+  }
+  
+  @media screen and (max-width:960px) {
+    .gallery-section .image{
+      flex: 33.33%;
+    }
+  }
+  
+  @media screen and (max-width:768px) {
+    .gallery-section .image{
+      flex: 50%;
+    }
+  }
+  
+  @media screen and (max-width:480px) {
+    .gallery-section .image{
+      flex: 100%;
+    }
+  }
+
+/* Footer */
+
+.footer-section p {
+  font-size:18px;
+  padding-top:12px;
+  padding-left:1rem;
+}
+
+.footer{
+  background: #46E7F7;
+  color: white;
+  margin: 10px;
+  margin-top: 60px;
+  border-radius: 10px;
+  height: 220px;
+  position: relative;
+}
+
+/*sticking to bottom*/
+
+.wrapper{
+  min-height:100;
+}
+
+.footer .footer-bottom{
+  font-size: 1.25rem;
+  background: #00BAD9;
+  color: white;
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* Footer Ends*/
+
+/* Responsiveness */
+
+@media screen and (max-width:700px){
+
+  h1{
+    font-size: 30px;
+  }
+
+  .inner-width h2{
+    padding:10px;
+  }
+
+  .inner-width p {
+    padding:10px;
+  }
+
+  .logo{
+    font-size: 20px;
+  }
+
+  .footer .footer-bottom{
+    font-size:1rem;
+  }
+
+  .footer{
+    height: 210px;
+    z-index:-1;
+  }
+
+  .footer-section p{
+    font-size: 15px;
+  }
+}

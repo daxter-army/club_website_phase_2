@@ -1,0 +1,92 @@
+@font-face {
+    font-family: fontCustomTwo;
+    src: url(../misc/roboto_slab.ttf);
+}
+  
+*{
+      margin: 0;
+      padding: 0;
+      font-family: fontCustomTwo;
+}
+
+h1{
+    margin: 10px;
+    font-size: 5rem;
+    text-align: center;
+    padding-top: 10rem;
+}
+
+.border{
+    width: 75%;
+    height: 8px;
+    background: #FFAE0B;
+    margin: 40px auto;
+}
+
+/* Footer */
+
+.footer{
+    background: #FFD997;
+    color: white;
+    margin: 10px;
+    border-radius: 10px;
+    height: 220px;
+    position: relative;
+    z-index:-1;
+  }
+
+  p{
+    font-size:18px;
+    padding-top:12px;
+    padding-left:1rem;
+  }
+  
+  /*sticking to bottom*/
+  
+  .wrapper{
+    min-height:calc(100vh - 240px);
+  }
+  
+  .footer .footer-bottom{
+    font-size: 1.25rem;
+    background: #FFAE0B;
+    color: white;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  /* Footer Ends*/
+
+  /*Responsiveness*/
+
+  @media screen and (max-width:800px){
+    .logo{
+      font-size: 20px;
+    }
+
+    h1{
+      font-size: 2rem;
+      padding-top: 5rem;
+    }
+
+    p{
+      font-size: 15px;
+    }
+
+    .footer{
+      height:210px;
+    }
+
+    .footer .footer-bottom{
+      font-size:1rem;
+    }
+
+  }
